@@ -1,7 +1,7 @@
 import { useForm } from '../hooks/useForm'
 
 function FormWithCustomHook () {
-  const { formState, inputOnChange, username, email, password } = useForm({
+  const { formState, inputOnChange, onResetForm, username, email, password } = useForm({
     username: '',
     email: '',
     password: ''
@@ -41,6 +41,7 @@ function FormWithCustomHook () {
       />
 
       <button className='mt-2' onClick={testButton}>Probar</button>
+      <button className='mt-2' onClick={onResetForm}>Resetear</button>
 
     </>
   )
