@@ -8,6 +8,10 @@ export function useFetch (url) {
   })
 
   const getFetch = async () => {
+    setState({
+      ...state,
+      isLoading: true
+    })
     const res = await fetch(url)
     const data = await res.json()
 
